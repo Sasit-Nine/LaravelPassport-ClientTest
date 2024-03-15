@@ -10,11 +10,11 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-20 w-auto rounded-lg" src="https://play-lh.googleusercontent.com/zCniKxijUXmw8CDvWTNMLad0mOWJkgmthvtaZNlYLipragveSxigapwvEm4KctJ72g" alt="Your Company">
       <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">OAuth 2.0</h2>
-      <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Authorization Code Grant Client</h2>
+      <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Password Grant Client</h2>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="{{ route('redirect') }}" method="GET">
+        <form class="space-y-6" action="{{ route('passwordgrant') }}" method="GET">
             <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Client ID</label>
                 <div class="mt-2">
@@ -27,7 +27,25 @@
                     <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Secret Key</label>
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="client_secret" type="text" autocomplete="current-password" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                    <input id="password" name="secret_key" type="text" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                </div>
+                <div class="mt-2">
+                    <input id="email" name="email" type="text" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                </div>
+                <div class="mt-2">
+                    <input id="password" name="password" type="text" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
                 </div>
             </div>
 

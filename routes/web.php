@@ -18,6 +18,9 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/password', function () {
+    return view('passwordclient');
+})->name('password');
 
 Route::get('/redirect', function (Request $request) {
     $state = Str::random(40);
@@ -57,3 +60,15 @@ Route::get('/callback', function (Request $request) {
 
     return $response->json();
 });
+
+Route::get('/passwordgrant',function(Request $request){
+    $response = Http::asForm()->post('http://wallserver.dyndns.info:86/oauth/token', [
+        'grant_type' => 'password',
+        'client_id' => $request->input('client_id'),
+        'client_secret' => $request->input('secret_key'),
+        'username' => $request->input('email'),
+        'password' => $request->input('password'),
+        'scope' => '',
+    ]);
+    return $response->json();
+})->name('passwordgrant');
