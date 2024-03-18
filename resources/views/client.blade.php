@@ -10,27 +10,26 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-20 w-auto rounded-lg" src="https://play-lh.googleusercontent.com/zCniKxijUXmw8CDvWTNMLad0mOWJkgmthvtaZNlYLipragveSxigapwvEm4KctJ72g" alt="Your Company">
       <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">OAuth 2.0</h2>
-      <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Authorization Code Grant Client</h2>
+      <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Client Credentials Grant</h2>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="{{ route('redirect') }}" method="GET">
+        <form class="space-y-6" action="{{ route('clientcredentail') }}" method="GET">
             <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Client ID</label>
+                <label for="" class="block text-sm font-medium leading-6 text-gray-900">Client ID</label>
                 <div class="mt-2">
-                    <input id="email" name="client_id" type="text" autocomplete="email" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                    <input id="" name="client_id" type="text" autocomplete="email" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
                 </div>
             </div>
 
-            {{-- <div>
+            <div>
                 <div class="flex items-center justify-between">
-                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Secret Key</label>
+                    <label for="" class="block text-sm font-medium leading-6 text-gray-900">Secret Key</label>
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="client_secret" type="text" autocomplete="current-password" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                    <input id="" name="secret_key" type="text" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
                 </div>
-            </div> --}}
-
+            </div>
             <div>
                 <button type="submit" class="flex w-full justify-center rounded-lg bg-red-600 px-3 py-3 mt-10 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Authorization Request</button>
             </div>
