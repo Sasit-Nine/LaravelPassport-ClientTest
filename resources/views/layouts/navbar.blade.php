@@ -11,6 +11,7 @@
                     <a href="{{ route('password') }}" class="{{ request()->is('password') ? 'border-red-500' : '' }} text-gray-900 inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium" aria-current="page">Password Grant</a>
                     <a href="{{ route('client') }}" class="{{ request()->is('client') ? 'border-red-500' : '' }} text-gray-900 inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium" aria-current="page">Client Credentials Grant</a>
                     <a href="{{ route('tokentest') }}" class="{{ request()->is('tokentest') ? 'border-red-500' : '' }} text-gray-900 inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium" aria-current="page">Test Access Token</a>
+                    <a href="{{ route('products') }}" class="{{ request()->is('products') ? 'border-red-500' : '' }} text-gray-900 inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium" aria-current="page">Products API</a>
                 </div>
             </div>
         </div>

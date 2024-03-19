@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -139,7 +139,7 @@ Route::get('/clientcredentail',function(Request $request){
         'grant_type' => 'client_credentials',
         'client_id' => $request->input('client_id'),
         'client_secret' => $request->input('secret_key'),
-        'scope' => '',
+        'scope' => 'products-read',
     ]);
     return $response->json();
 })->name('clientcredentail');
@@ -148,7 +148,9 @@ Route::get('/test',function(Request $request){
     $response = Http::withHeaders([
         'Accept' => 'application/json',
         'Authorization' => 'Bearer '.$request->input('access_token'),
-    ])->get('http://wallserver.dyndns.info:86/api/user');
+    ])->get('http://wallserver.dyndns.info:86/api/products');
 
     return $response;
 })->name('test');
+
+Route::get('/products', [ProductController::class, 'index'])->name('products');
