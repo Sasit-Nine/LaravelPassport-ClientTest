@@ -50,6 +50,13 @@
             </div>
 
             <div>
+                <label for="scope" class="block text-sm font-medium leading-6 text-gray-900">Scope</label>
+                <div class="mt-2">
+                    <input id="" name="scope" type="text" autocomplete="" required class="block w-full rounded-lg border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus: sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div>
                 <button type="submit" class="flex w-full justify-center rounded-lg bg-red-600 px-3 py-3 mt-10 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Authorization Request</button>
             </div>
         </form>

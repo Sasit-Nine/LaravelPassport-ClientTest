@@ -78,7 +78,7 @@ Route::get('/passwordgrant',function(Request $request){
         'client_secret' => $request->input('secret_key'),
         'username' => $request->input('email'),
         'password' => $request->input('password'),
-        'scope' => '',
+        'scope' => $request->input('scope'),
     ]);
     return $response->json();
 })->name('passwordgrant');
@@ -101,7 +101,7 @@ Route::get('/redirect', function (Request $request) {
         'client_id' => $request->input('client_id'),
         'redirect_uri' => 'http://127.0.0.1:8000/callback',
         'response_type' => 'code',
-        'scope' => '',
+        'scope' => $request->input('scope'),
         'state' => $state,
         'code_challenge' => $codeChallenge,
         'code_challenge_method' => 'S256',
@@ -139,7 +139,7 @@ Route::get('/clientcredentail',function(Request $request){
         'grant_type' => 'client_credentials',
         'client_id' => $request->input('client_id'),
         'client_secret' => $request->input('secret_key'),
-        'scope' => 'products-read',
+        'scope' => $request->input('scope'),
     ]);
     return $response->json();
 })->name('clientcredentail');
